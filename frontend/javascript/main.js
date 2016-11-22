@@ -2,7 +2,7 @@ requirejs.config({
     baseUrl: './js'
 });
 
-define(["jquery", "domReady", "jquery.maskedinput"], function ($) {
+define(["jquery", "domReady", "slick", "jquery.maskedinput"], function ($) {
     "use strict";
     //burger menu header
     $('.header-navigation__item').hover(function () {
@@ -42,7 +42,7 @@ define(["jquery", "domReady", "jquery.maskedinput"], function ($) {
     $('.search').click(function () {
         $('.search-form ')
             .stop()
-            .toggleClass('active_field'),
+            .toggleClass('active_field');
             $(' #search-field')
                 .stop()
                 .toggleClass('active_search')
@@ -51,11 +51,13 @@ define(["jquery", "domReady", "jquery.maskedinput"], function ($) {
     $('.icon-cross').click(function () {
         $('.search-form ')
             .stop()
-            .toggleClass('active_field'),
+            .toggleClass('active_field');
             $(' #search-field')
                 .stop()
                 .toggleClass('active_search')
 
     });
 
+    //slick slider
+    $('.main-banner').slick();
 });
