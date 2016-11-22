@@ -1,0 +1,27 @@
+#submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: #c50000;
+  .submenu-item {
+    @include anim($param: background);
+    &:hover {
+      background: $colorLink;
+      .submenu-link{
+        border-bottom: 1px solid $colorLink;
+      }
+    }
+  }
+  .submenu-link {
+    display: block;
+    color: #ffffff;
+    font-size: $fontNav;
+    padding: 1.25em;
+    border-bottom: 1px solid #b10000;
+    white-space: nowrap;
+    margin: 0 1.25em;
+  }
+}

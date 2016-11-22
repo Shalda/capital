@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{{ title }}{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+    {% block fontsLink %}{% endblock %}
+    <link rel="stylesheet" href="./css/style.css">
+    {% block stylesheet %}{% endblock %}
+    <script src="./js/require.js" data-main="./js/main"></script>
+</head>
+<body>
+<div id="wrapper">
+    <header id="site-header">{% block header %}
+            {% include './modules/_header.twig' with {header: includes.header} %}
+        {% endblock %}</header>
+    <section id="site-main">{% block main %}{% endblock %}
+    </section>
+    <footer id="site-footer">
+        {% block footer %}
+            {% include './modules/_footer.twig' with {footer: includes.footer} %}
+        {% endblock %}
+    </footer>
+</div>
+</body>
+</html>
+

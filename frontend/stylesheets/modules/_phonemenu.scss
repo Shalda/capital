@@ -1,0 +1,38 @@
+.phone-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: $bgGrey;
+  white-space: nowrap;
+  text-align: center;
+  padding: 2em 2.0em 1.875em;
+  color: $colortext;
+
+  .order {
+    padding: 0 0 1em;
+    font: 700 1.3125em $family;
+  }
+  .call-data {
+    width: 100%;
+    border: none;
+    background: $bgGrey;
+    font-size: 0.9em;
+    padding: 1em 0;
+    border-bottom: 1px solid #ccc;
+    &:focus{
+      outline: none;
+    }
+  }
+  .callback-button{
+    margin: 2em 0 1.8em;
+  }
+  .time {
+    font-size: 0.875em;
+    width: 210px;
+    margin: 0 auto;
+    line-height: 1.5;
+    white-space: normal;
+  }
+}

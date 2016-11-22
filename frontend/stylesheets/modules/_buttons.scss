@@ -1,0 +1,21 @@
+button {
+  cursor: pointer;
+  font-size: 1em;
+  border: 2px solid $colorLink;
+  padding: 0 1.5em;
+  line-height: 50px;
+  border-radius: 25px;
+  background: 0 0;
+  color: $colorLink;
+  font-weight: 700;
+  @include anim($param: color);
+  @include anim($param: background);
+  &:focus {
+    outline: none;
+  }
+  &:hover{
+    background: $colorLink;
+    color: $bgWhite;
+  }
+
+}

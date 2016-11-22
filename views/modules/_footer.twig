@@ -1,0 +1,23 @@
+<div class="footer container">
+    <div class="copyright">
+        {{ footer.copyrights }}
+    </div>
+    <div class="footer-links">
+        <ul>
+            {% for link in footer.links %}
+                <li class="footer-links__item">
+                    <a href="{{ link.link }}">{{ link.name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="footer-social">
+        <ul>
+            {% for icon in footer.social %}
+            <li class="footer-social__box icon">
+                <a class="icon-{{ icon.name }}" href="{{ icon.url }}"><span>{{ icon.name }}</span></a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

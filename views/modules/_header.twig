@@ -1,0 +1,83 @@
+<div class="header container">
+    <div class="header-logo">
+        <a href="{{ header.logoUrl }}">
+            <img src="./images/{{ header.logoImage }}" alt="">
+        </a>
+    </div>
+    <nav class="navigation-box">
+        <ul class="header-navigation">
+            {% for nav in header.nav %}
+                <li class="header-navigation__item">
+                    <a class="header-navigation__link" href="{{ nav.link }}">{{ nav.name }}</a>
+                    <ul id="submenu">
+                        {% for sub in nav.submenu %}
+                            <li class="submenu-item">
+                                <a class="submenu-link" href="{{ sub.link }}">{{ sub.name }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+    <div class="info">
+        <div id="header-search">
+            {% for search in header.search %}
+                <a class="icon-{{ search.name }} icon search"
+                   href="{{ search.link }}"><span>{{ search.name }}</span></a>
+               <div class="search-box">
+                <form class="search-form" action="{{ search.link }}">
+                    <input type="search" placeholder="{{ search.text }}" name="search" id="search-field" >
+                    <a class="abort-button icon-{{ search.abort }} icon" href="#">
+                        <span>{{ search.abort }}</span>
+                    </a>
+                </form>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="vk-header icon">
+            {% for vkicon in header.vkHeader %}
+                <a class="icon-{{ vkicon.name }}" href="{{ vkicon.link }}"><span>{{ vkicon.name }}</span></a>
+            {% endfor %}
+        </div>
+        <div class="header-phone">
+            {% for phone in header.phone %}
+                <a href="{{ phone.url }}">
+                <span class="phone__number">{{ phone.number }}
+                    <span class="icon-{{ phone.icon }} icon phone-button"><span>{{ phone.icon }}</span></span>
+                </span>
+                    <div class="phone-text">{{ phone.text }}</div>
+                </a>
+                <div class="phone-menu">
+                    {% for menu in phone.phoneMenu %}
+                        <form class="callBack-menu">
+                            <div class="order">{{ menu.order }}</div>
+                            <div class="input_box">
+                                <input type="text" class="call-data" id="name-field" placeholder="{{ menu.yourName }}">
+                            </div>
+                            <div class="input_box">
+                                <input type="tel" class="call-data" id="phone-field" placeholder="{{ menu.yourPhone }}">
+                            </div>
+                            <button type="submit" id="callBack" class="callback-button">{{ menu.orderButton }}</button>
+                            <div class="time">
+                                <span>{{ menu.time }}</span>
+                            </div>
+                        </form>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+        <div id="language">
+            {% for lng in header.language %}
+                <a href="{{ lng.url }}" class="language-box">
+                    <div class="language-rus">{{ lng.rus }}</div>
+                </a>
+                <div class="language-menu">
+                    <a href="{{ lng.url }}" class="language-box">
+                        <div class="language-ukr">{{ lng.ukr }}</div>
+                    </a>
+                </div>
+            {% endfor %}
+            <div class="icon-{{ iconArrow }} icon lang-button"><span>{{ iconArrow }}</span></div>
+        </div>
+    </div>
+</div>
