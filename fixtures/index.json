@@ -3,5 +3,16 @@
   slider: [
     {image: "banner1.jpg", url: "#"},
     {image: "banner2.jpg", url: "#"}
-  ]
+  ],
+  sliderButton:[
+  {name: "prev"},
+  {name: "next"}],
+  footer: {
+    newsHeader:[{latest: "Последние новости", all: "Все новости", icon: "arrow-right", url: "#"}],
+    articles: [
+          {imgUrl: "news1.jpg", text: "Только самые «Удачные Праздники», для наших клиентов!", date: "15 октября 2016", url: "#" },
+          {imgUrl: "news2.jpg", text: "В новом отделении Запорожья, действует акция «Кредит «Шикарный»", date: "5 ноября 2016", url: "#" }
+        ],
+    emailLetter: [{bonus: "Получите бонус", bonusValue: "+20% стоимости", condition: "при оценке Вашего имущества", letter: "Мы отправим Вам купон по электронной почте", placeholder: "Ваш E-mail...", submit: "Отправить" }]
+  }
 }

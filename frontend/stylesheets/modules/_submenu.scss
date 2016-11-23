@@ -4,13 +4,13 @@
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-
+  z-index: 1;
   background: #c50000;
   .submenu-item {
     @include anim($param: background);
     &:hover {
       background: $colorLink;
-      .submenu-link{
+      .submenu-link {
         border-bottom: 1px solid $colorLink;
       }
     }

@@ -18,8 +18,8 @@ define(["jquery", "domReady", "slick", "jquery.maskedinput"], function ($) {
             .stop()
             .toggleClass('active_arrow'),
             $('.header-phone')
-                .find('.phone-menu')
                 .stop()
+                .find('.phone-menu')
                 .slideToggle('fast')
     });
 
@@ -29,8 +29,8 @@ define(["jquery", "domReady", "slick", "jquery.maskedinput"], function ($) {
             .stop()
             .toggleClass('active_arrow'),
             $('#language')
-                .find('.language-menu')
                 .stop()
+                .find('.language-menu')
                 .slideToggle('fast')
     });
 
@@ -60,4 +60,8 @@ define(["jquery", "domReady", "slick", "jquery.maskedinput"], function ($) {
 
     //slick slider
     $('.main-banner').slick();
+
+    // selector for slider buttons
+    $('.slick-next').addClass('icon-next');
+    $('.slick-prev').addClass('icon-prev');
 });

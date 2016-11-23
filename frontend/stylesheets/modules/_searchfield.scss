@@ -17,7 +17,7 @@
     .search-form {
       opacity: 0;
       position: relative;
-      @include anim($param:width, $dur:0.5s);
+      @include anim($param: opacity, $dur:0.3s);
       .abort-button {
         background: $bgDarkRed;
         position: absolute;
@@ -37,7 +37,7 @@
         position: relative;
         display: block;
         width: 50px;
-        @include anim($param:width, $dur:0.3s);
+        @include anim($param: width, $dur:0.3s);
       }
       input[type="search"]::placeholder {
         text-overflow: ellipsis;
@@ -51,6 +51,7 @@
     }
     .active_search {
       width: 280px !important;
+
 
     }
   }

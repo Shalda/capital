@@ -74,15 +74,20 @@
         }
       }
       .icon-arrow {
+        cursor: pointer;
         position: absolute;
-        top: 50%;
+        top: 60%;
         left: 100%;
-        transform: translateY(-50%) rotate(180deg);
+        transform: translateY(-50%);
         font-size: 1.5em;
         @include anim($param: transform);
+        transform-origin: 50% 40%;
+      }
+      .lang-button{
+        top: 55%;
       }
       .active_arrow {
-        transform: translateY(-50%) rotate(360deg);
+        transform: translateY(-50%) rotate(180deg);
       }
     }
   }

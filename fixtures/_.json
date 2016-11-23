@@ -4,47 +4,47 @@
   iconArrow: "arrow",
   includes: {
       header: {
-      logoUrl: "#",
-      logoImage: "logo.png",
-      vkHeader: [
-        {name: "vk",link: "#"}],
-      nav: [
-        {name: "Кредиты",link: "#"},
-        {name: "Отделения",link: "#"},
-        {name: "Акции",link: "#"},
-        {name: "Программа лояльности", link: "#"},
-        {name: "О компании", link: "#",
-          submenu: [
-            { name: "О нас",link: "#"},
-            { name: "Контакты",link: "#"},
-            { name: "Новости",link: "#"},
-            { name: "Вопросы",link: "#"},
-            { name: "Реквизиты",link: "#"},
-            { name: "Финансовыя отчетность",link: "#"}
-          ]
-        }
-      ],
-      phone: [
-        {
-          number: "0 800 300 703",
-          text: "Звонки бесплатные",
-          icon: "arrow",
-          url: "#"
-        },
-        {
-          phoneMenu: [
-            {
-              order: "Закажите обратный звонок",
-              yourName: "Ваше имя",
-              yourPhone: "Ваш телефон",
-              orderButton: "Заказть обратный звонок",
-              time: "Мы перезваниваем ежедневно c 9:00 до 21:00"
+          logoUrl: "#",
+          logoImage: "logo.png",
+          vkHeader: [
+            {name: "vk",link: "#"}],
+          nav: [
+            {name: "Кредиты",link: "#"},
+            {name: "Отделения",link: "#"},
+            {name: "Акции",link: "#"},
+            {name: "Программа лояльности", link: "#"},
+            {name: "О компании", link: "#",
+              submenu: [
+                { name: "О нас",link: "#"},
+                { name: "Контакты",link: "#"},
+                { name: "Новости",link: "#"},
+                { name: "Вопросы",link: "#"},
+                { name: "Реквизиты",link: "#"},
+                { name: "Финансовыя отчетность",link: "#"}
+              ]
             }
-          ]
-        }
-      ],
-      language: [{ukr:"Укр", rus:"Рус", link:"#" }],
-      search:[{text:"Поиск", name: "search", link: "#", abort: "cross"}]
+          ],
+          phone: [
+            {
+              number: "0 800 300 703",
+              text: "Звонки бесплатные",
+                 icon: "arrow",
+              url: "#"
+           },
+            {
+              phoneMenu: [
+                {
+                  order: "Закажите обратный звонок",
+                  yourName: "Ваше имя",
+                  yourPhone: "Ваш телефон",
+                  orderButton: "Заказть обратный звонок",
+                  time: "Мы перезваниваем ежедневно c 9:00 до 21:00"
+                }
+              ]
+            }
+         ],
+         language: [{ukr:"Укр", rus:"Рус", link:"#" }],
+          search:[{text:"Поиск", name: "search", link: "#", abort: "cross"}]
     },
 
     footer: {

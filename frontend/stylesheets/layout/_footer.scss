@@ -14,16 +14,46 @@
 
         padding: 1.875em 2.1875em;
         @include anim($param: opacity);
-        &:hover{
+        &:hover {
           opacity: 0.7;
         }
       }
     }
-    .footer-social__box{
+    .footer-social__box {
       a {
         font-size: 1em;
         padding: 1.875em 0.9375em;
       }
+    }
+  }
+}
+
+// foter main-page
+#site-footer {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2.6875em 2.6875em 2.875em;
+    .news {
+      position: relative;
+      width: 63%;
+      text-align: left;
+      padding: 0 2.5em;
+      &:after{
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        content: "";
+        height: 100%;
+        width: 1px;
+        background: $bgGreyLine;
+      }
+    }
+    .subscribe {
+      width: 37%;
+      text-align: center;
+      padding: 3.75em 3em 0 3.9375em;
     }
   }
 }

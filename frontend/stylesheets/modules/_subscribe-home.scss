@@ -1,0 +1,35 @@
+.subscribe__header {
+  font-size: 1.3125em;
+  line-height: 1.4;
+  .subscribe__bonus, .subscribe__value {
+    font-weight: 700;
+  }
+  .subscribe__value {
+   color: $colorLink;
+  }
+}
+.subscribe__form{
+  padding: 1.5em 0;
+  .input-container{
+    width: 100%;
+    border-radius: 25px;
+    background: $bgWhite;
+    position: relative;
+    text-align: left;
+    .subscribe__box{
+      text-align: left;
+      height: 50px;
+      line-height: 50px;
+      border: none;
+      padding: 0 1.5em;
+      font-style: italic;
+      margin: 0 1.2em;
+    }
+    button{
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

@@ -1,10 +1,12 @@
 {% extends '../_layout.twig' %}
 {% block title %}{{ title }}{% endblock %}
-{% block stylesheet %}<link rel="stylesheet" href="./css/slick.css">{% endblock %}
 {% block main %}
-<div class="main-banner">
-    {% for slide in slider %}
-        <div class="slide" style="background-image: url(./images/{{ slide.image }});"><a href="{{ slide.url }}"></a></div>
-    {% endfor %}
-</div>
+    <div class="main-banner">
+       {% for slide in slider %}
+            <a class="slide" href="{{ slide.url }}" style="background-image: url(./images/{{ slide.image }});"></a>
+        {% endfor %}
+    </div>
 {% endblock %}
+ {% block footer %}
+     {% include '../modules/_footer-homepage.twig'%}
+ {% endblock %}

@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="news">
+        <div class="news__header">{% for news in footer.newsHeader %}
+                <span>{{ news.latest }}</span>
+                <span>{{ news.all }}</span>
+                <a href="{{ news.url }}" class="icon-{{ news.icon }} icon"><span>{{ news.icon }}</span></a>
+            {% endfor %}
+        </div>
+        <div class="article">
+            {% for article in footer.articles %}
+                <ul class="article__container">
+                    <li class="artcile__item">
+                        <a  class="article__link" href="{{ article.url }}">
+                            <img src="./images/{{ article.imgUrl }}" alt="news image">
+                            <div class="article__box">
+                                <p class="article-text">{{ article.text }}</p>
+                                <p class="article-date">{{ article.date }}</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="subscribe">
+        {% for email in footer.emailLetter %}
+            <div class="subscribe__header">
+                <span class="subscribe__bonus">{{ email.bonus }}</span>
+                <span class="subscribe__value">{{ email.bonusValue }}</span>
+                <p class="subscribe__condition">{{ email.condition }}</p>
+            </div>
+            <form action="#" method="post" class="subscribe__form">
+                <div class="input-container">
+                    <input type="text" class="subscribe__box" id="subscribe-field" placeholder="{{ email.placeholder }}">
+                    <button type="submit">{{ email.submit }}</button>
+                </div>
+            </form>
+            <p class="subscribe__text">{{ email.letter }}</p>
+
+        {% endfor %}
+    </div>
+</div>

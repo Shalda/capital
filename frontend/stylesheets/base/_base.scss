@@ -5,8 +5,13 @@
 body {
   font: 16px/1.2 'PT Sans', Helvetica, sans-serif;
   background: $bgGrey;
+  color: $colortext;
 }
-
+img {
+  vertical-align: top;
+  max-width: 100%;
+  height: auto;
+}
 .container {
   padding: 0 40px;
 }
