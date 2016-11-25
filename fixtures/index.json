@@ -2,7 +2,8 @@
   title: 'Ломбард "Капитал"',
   slider: [
     {image: "banner1.jpg", url: "#"},
-    {image: "banner2.jpg", url: "#"}
+    {image: "banner2.jpg", url: "#"},
+    {image: "banner3.jpg", url: "#"}
   ],
   sliderButton:[
   {name: "prev"},

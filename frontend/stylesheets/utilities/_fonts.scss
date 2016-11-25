@@ -62,3 +62,8 @@
    color: transparent;
  }
 }
+.icon-search, .vk-header{
+  @include bp(1100){
+    font-size: 0.9em !important;
+  }
+}

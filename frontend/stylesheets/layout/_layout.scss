@@ -1,14 +1,23 @@
 #wrapper{
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+
+
 }
 .container{
   max-width: $maxWidth;
   margin: 0 auto;
 }
 #site-main{
-  flex-grow: 1;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   background: $bgWhite;
-  position: relative;
+  .homepage-main{
+    flex: 1 0 auto;
+    position: relative;
+
+  }
+
 }

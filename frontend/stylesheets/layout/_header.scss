@@ -1,16 +1,21 @@
 #site-header {
   background: $colorLink;
+  height: 100%;
   .header {
     display: flex;
     align-items: stretch;
     justify-content: space-between;
+    position: relative;
     .header-logo {
       align-items: center;
       padding: 0 2.6875em 0 0;
       display: flex;
+      @include bp(1140){
+        padding: 0;
+        width: 16%;
+      }
     }
     .navigation-box {
-      flex-grow: 1;
       display: flex;
       align-items: center;
 
@@ -24,15 +29,17 @@
           display: block;
           color: #ffffff;
           padding: 2.1875em 1.25em;
-
+          @include bp(1070){
+            padding: 2em 0.8em;
+          }
           &:hover {
             text-shadow: 0 -0.3px 1px rgba(255, 255, 255, 1);
+            box-sizing: border-box;
           }
         }
       }
     }
     .info {
-      flex-grow: 1;
       display: flex;
       align-items: stretch;
       .vk-header {
@@ -54,9 +61,16 @@
           .phone__number {
             font-size: 1.3215em;
             position: relative;
+            @include bp(1070){
+              font-size: 1.2em;
+            }
           }
           .phone__text {
             font-size: 0.9em;
+            white-space: nowrap;
+            @include bp(1070){
+              font-size: 0.8em;
+            }
           }
         }
       }
@@ -66,6 +80,9 @@
         align-items: center;
         color: $bgWhite;
         position: relative;
+        @include bp(1100){
+          margin: 0 0 0 2em;
+        }
         .language-box {
           display: block;
         }
@@ -80,6 +97,7 @@
         left: 100%;
         transform: translateY(-50%);
         font-size: 1.5em;
+        -webkit-backface-visibility: hidden;
         @include anim($param: transform);
         transform-origin: 50% 40%;
       }

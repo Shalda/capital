@@ -1,11 +1,13 @@
 {% extends '../_layout.twig' %}
 {% block title %}{{ title }}{% endblock %}
 {% block main %}
+    <section class="homepage-main">
     <div class="main-banner">
        {% for slide in slider %}
             <a class="slide" href="{{ slide.url }}" style="background-image: url(./images/{{ slide.image }});"></a>
         {% endfor %}
     </div>
+    </section>
 {% endblock %}
  {% block footer %}
      {% include '../modules/_footer-homepage.twig'%}

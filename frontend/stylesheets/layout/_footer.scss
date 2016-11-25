@@ -11,7 +11,6 @@
       a {
         display: block;
         color: $colortext;
-
         padding: 1.875em 2.1875em;
         @include anim($param: opacity);
         &:hover {
@@ -53,7 +52,10 @@
     .subscribe {
       width: 37%;
       text-align: center;
-      padding: 3.75em 3em 0 3.9375em;
+      padding: 0 3em 0 3.9375em;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
     }
   }
 }

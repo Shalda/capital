@@ -19,7 +19,7 @@ define(["jquery", "domReady", "slick", "jquery.maskedinput"], function ($) {
             .toggleClass('active_arrow'),
             $('.header-phone')
                 .stop()
-                .find('.phone-menu')
+                .find('.phone__menu')
                 .slideToggle('fast')
     });
 
@@ -59,9 +59,19 @@ define(["jquery", "domReady", "slick", "jquery.maskedinput"], function ($) {
     });
 
     //slick slider
-    $('.main-banner').slick();
+    $('.main-banner').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+    });
 
     // selector for slider buttons
     $('.slick-next').addClass('icon-next');
     $('.slick-prev').addClass('icon-prev');
+
+
+    // sticky footer
+    // var footerHeight = $('#site-footer').height(); //это ты узнал высоту футера
+    // $('#wrapper').css('padding-bottom', footerHeight);
 });

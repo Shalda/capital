@@ -45,9 +45,9 @@
                 <span class="phone__number">{{ phone.number }}
                     <span class="icon-{{ phone.icon }} icon phone-button"><span>{{ phone.icon }}</span></span>
                 </span>
-                    <div class="phone-text">{{ phone.text }}</div>
+                    <div class="phone__text">{{ phone.text }}</div>
                 </a>
-                <div class="phone-menu">
+                <div class="phone__menu">
                     {% for menu in phone.phoneMenu %}
                         <form class="callBack-menu">
                             <div class="order">{{ menu.order }}</div>
