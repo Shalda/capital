@@ -12,7 +12,7 @@ body {
   }
   background: $bgGrey;
   color: $colortext;
-
+  min-width: $minWidth;
 }
 
 img {

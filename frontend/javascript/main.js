@@ -71,7 +71,15 @@ define(["jquery", "domReady", "slick", "jquery.maskedinput"], function ($) {
     $('.slick-prev').addClass('icon-prev');
 
 
-    // sticky footer
-    // var footerHeight = $('#site-footer').height(); //это ты узнал высоту футера
-    // $('#wrapper').css('padding-bottom', footerHeight);
+    // main contnent height on homepage
+    function setHeight(){
+    var footerHeight = $('#site-footer').height();
+    var headerHeight = $('#site-header').height();
+    var mainHeight = $(window).height() - (footerHeight + headerHeight);
+    $('#site-main').css('height',  mainHeight);
+    };
+
+    $(document).ready(function () {setHeight()});
+    $(window).resize( function () {setHeight()})
+
 });
