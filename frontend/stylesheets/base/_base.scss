@@ -4,12 +4,12 @@
 
 body {
   font: 16px/1.2 'PT Sans', Helvetica, sans-serif;
-  @include bp(1200) {
-    font: 14px/1 'PT Sans', Helvetica, sans-serif;
-  }
   @include bp(1260) {
     font: 15px/1.1 'PT Sans', Helvetica, sans-serif;
-  }
+  };
+  @include bp(1200) {
+    font: 14px/1 'PT Sans', Helvetica, sans-serif;
+  };
   background: $bgGrey;
   color: $colortext;
   min-width: $minWidth;

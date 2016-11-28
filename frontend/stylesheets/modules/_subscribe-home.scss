@@ -1,6 +1,9 @@
 .subscribe__header {
   font-size: 1.3125em;
   line-height: 1.4;
+  @include bp(950){
+    font-size: 1.8em;
+  }
   .subscribe__bonus, .subscribe__value {
     font-weight: 700;
   }
@@ -10,12 +13,19 @@
 }
 .subscribe__form{
   padding: 1.5em 0;
+  @include bp(950){
+    padding: 1.5em 1.5em;;
+  }
+
   .input-container{
     width: 100%;
     border-radius: 25px;
     background: $bgWhite;
     position: relative;
     text-align: left;
+    @include bp(950){
+      border-radius: 30px;
+    }
     .subscribe__box{
       text-align: left;
       height: 50px;
@@ -24,12 +34,24 @@
       padding: 0 1.5em;
       font-style: italic;
       margin: 0 1.2em;
+      @include bp(950){
+        height: 60px;
+        line-height: 60px;
+        margin: 0 1.8em;
+        font-size: 1.3em;
+      }
     }
     button{
       position: absolute;
       right: 0;
       top: 50%;
       transform: translateY(-50%);
+
+      border-radius: 30px;
+      @include bp(950){
+        font-size: 1.5em;
+        line-height:60px;
+      }
     }
   }
 }

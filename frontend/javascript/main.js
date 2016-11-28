@@ -73,13 +73,23 @@ define(["jquery", "domReady", "slick", "jquery.maskedinput"], function ($) {
 
     // main contnent height on homepage
     function setHeight(){
-    var footerHeight = $('#site-footer').height();
-    var headerHeight = $('#site-header').height();
-    var mainHeight = $(window).height() - (footerHeight + headerHeight);
+      var footerHeight = $('#site-footer').height();
+      var headerHeight = $('#site-header').height();
+      var mainFooter = $('.icon-next').height();
+      var mainHeight;
+        mainSize();
+        function mainSize() {
+            if ($(window).width() >= '950'){
+                mainHeight = $(window).height() - (footerHeight + headerHeight);
+            }else {
+                mainHeight = $(window).height() - (headerHeight + mainFooter);
+            }};
+
+
+
     $('#site-main').css('height',  mainHeight);
     };
 
-    $(document).ready(function () {setHeight()});
-    $(window).resize( function () {setHeight()})
+    $(window).on('load resize', setHeight);
 
 });

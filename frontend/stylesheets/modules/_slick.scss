@@ -20,12 +20,18 @@
   position: absolute;
   width: 47px;
   height: 47px;
-  right: 150px;
+  right: 145px;
   bottom: -23px;
   border-radius: 50%;
   background: #e60000;
   z-index: 2;
   font-size: 0em;
+  @include bp(950){
+    width: 85px;
+    height: 85px;
+    bottom: -43px;
+    right: 195px;
+  }
   @include anim-param($param: background, $param: border);
   &:hover{
     background: rgba( 0,0,0,0.5);
@@ -41,6 +47,9 @@
     top: 50%;
     left: 48%;
     transform: translate(-50%, -50%);
+    @include bp(950){
+      font-size: 45px;
+    }
 
   }
 }
@@ -50,6 +59,8 @@
     left: 54%;
   }
 }
+
+
 
 /* Slider */
 

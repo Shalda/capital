@@ -43,9 +43,9 @@
   .article__container:first-child {
   }
   .article__container {
-    display: inherit;
+    display: flex;
     .article__item {
-      display: inherit;
+      display: flex;
       &:last-child {
         margin-left: 2em;
 
